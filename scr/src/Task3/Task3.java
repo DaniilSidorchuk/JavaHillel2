@@ -8,6 +8,7 @@ public class Task3 {
         System.out.println("200 year is " + century(200) + " century");
         System.out.println("1327 year is " + century(1327) + " century");
         System.out.println("99 year is " + century(99) + " century");
+        System.out.println("5 year is " + century(5) + " century");
         System.out.println("-99 year is " + century(-99) + " century");
 
     }
