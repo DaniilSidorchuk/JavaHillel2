@@ -72,22 +72,24 @@ public class MyCalc {
 //        System.out.println("Result of erection of" + " " + a + " " + "to the second degree is" + " " + pow(a));
 //        System.out.println(b + " % " + "from  " + a + " is" + " " + percent(a, b));
 
-        System.out.println("Cast to long " + castToLong(10));
-        byte x1 = 10;
-        byte x2 = -5;
-        System.out.println("Check sign " + checkSign(x1));
-        System.out.println("Check sign " + checkSign(x2));
-        System.out.println("Check even number " + checkEvenNumber(10));
-        System.out.println("Check even number " + checkEvenNumber(9));
-        System.out.println("bitWiseDivByFour " + bitWiseDivByFour(100));
-        System.out.println("bitWiseDivByFour " + bitWiseDivByFour(32));
-        System.out.println("bitWiseDivByFour " + bitWiseDivByFour(8));
-        System.out.println("bitWiseDivByFour " + bitWiseDivByFour(6));
-        System.out.println("bitWiseDivByFour " + bitWiseDivByFour(4));
-        System.out.println("bitWiseDivByFour " + bitWiseDivByFour(3));
-        System.out.println("bitWiseDivByFour " + bitWiseDivByFour(2));
-        System.out.println("bitWiseDivByFour " + bitWiseDivByFour(1));
-        System.out.println("bitWiseDivByFour " + bitWiseDivByFour(-100));
+//        System.out.println("Cast to long " + castToLong(10));
+//        byte x1 = 10;
+//        byte x2 = -5;
+//        System.out.println("Check sign " + checkSign(x1));
+//        System.out.println("Check sign " + checkSign(x2));
+//        System.out.println("Check even number " + checkEvenNumber(10));
+//        System.out.println("Check even number " + checkEvenNumber(9));
+//        System.out.println("bitWiseDivByFour " + bitWiseDivByFour(100));
+//        System.out.println("bitWiseDivByFour " + bitWiseDivByFour(32));
+//        System.out.println("bitWiseDivByFour " + bitWiseDivByFour(8));
+//        System.out.println("bitWiseDivByFour " + bitWiseDivByFour(6));
+//        System.out.println("bitWiseDivByFour " + bitWiseDivByFour(4));
+//        System.out.println("bitWiseDivByFour " + bitWiseDivByFour(3));
+//        System.out.println("bitWiseDivByFour " + bitWiseDivByFour(2));
+//        System.out.println("bitWiseDivByFour " + bitWiseDivByFour(1));
+//        System.out.println("bitWiseDivByFour " + bitWiseDivByFour(-100));
+
+
     }
 
     public static long castToLong(double val) {
@@ -124,5 +126,7 @@ public class MyCalc {
         result = result >> 2;
         return result;
     }
+
+
 
 }
