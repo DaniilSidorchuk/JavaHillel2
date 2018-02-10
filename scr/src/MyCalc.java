@@ -61,35 +61,6 @@ public class MyCalc {
 
     public static void main(String[] args) {
 
-//        int a = 15;
-//        int b = 4;
-//
-//        System.out.println("Result of addition is" + " " + add(a, b));
-//        System.out.println("Result of subtraction is" + " " + sub(a, b));
-//        System.out.println("Result of multiplication is" + " " + mul(a, b));
-//        System.out.println("Result of division is" + " " + div(a, b));
-//        System.out.println("Result of mod of division is" + " " + mod(a, b));
-//        System.out.println("Result of erection of" + " " + a + " " + "to the second degree is" + " " + pow(a));
-//        System.out.println(b + " % " + "from  " + a + " is" + " " + percent(a, b));
-
-//        System.out.println("Cast to long " + castToLong(10));
-//        byte x1 = 10;
-//        byte x2 = -5;
-//        System.out.println("Check sign " + checkSign(x1));
-//        System.out.println("Check sign " + checkSign(x2));
-//        System.out.println("Check even number " + checkEvenNumber(10));
-//        System.out.println("Check even number " + checkEvenNumber(9));
-//        System.out.println("bitWiseDivByFour " + bitWiseDivByFour(100));
-//        System.out.println("bitWiseDivByFour " + bitWiseDivByFour(32));
-//        System.out.println("bitWiseDivByFour " + bitWiseDivByFour(8));
-//        System.out.println("bitWiseDivByFour " + bitWiseDivByFour(6));
-//        System.out.println("bitWiseDivByFour " + bitWiseDivByFour(4));
-//        System.out.println("bitWiseDivByFour " + bitWiseDivByFour(3));
-//        System.out.println("bitWiseDivByFour " + bitWiseDivByFour(2));
-//        System.out.println("bitWiseDivByFour " + bitWiseDivByFour(1));
-//        System.out.println("bitWiseDivByFour " + bitWiseDivByFour(-100));
-
-
     }
 
     public static long castToLong(double val) {
@@ -111,14 +82,11 @@ public class MyCalc {
 
         int op1 = (int) value;
         int op2 = 0b0001;
+        int op3 = 0b0001;
         int result = op1&op2;
-        if (result == 0){
-            System.out.println(1);
-            return 1;
-        }
-        System.out.println(0);
-        return 0;
-
+        result = result^op3;
+        System.out.println(result);
+        return result;
     }
 
     public static long bitWiseDivByFour(double number) {
