@@ -10,7 +10,6 @@ public class RandomNumber {
 
     public static void random (){
 
-        int i = 1;
         double number;
         do {
             number = Math.random();
@@ -22,7 +21,7 @@ public class RandomNumber {
             }else{
                 System.out.println("Eagle");
             }
-        }while (i>0);
+        }while (true);
 
     }
 

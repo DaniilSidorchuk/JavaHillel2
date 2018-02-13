@@ -4,8 +4,9 @@ public class SumOfNumbers {
 
     public static void main(String[] args) {
 
-        int number = 512358;
+        int number = 50123580;
         System.out.println("Sum of all numbers is " + sum(number));
+        System.out.println("Sum of all numbers is " + sumAlternativeMethod(number));
 
     }
 
@@ -24,6 +25,25 @@ public class SumOfNumbers {
         i/=10;
         }
         return result;
+    }
+
+    public static int sumAlternativeMethod (int number){
+
+        int x=1;
+        int result = 0;
+
+
+        while (number!=0){
+            if (number>=10) {
+                x = number % (number / 10);
+                number /= 10;
+                result += x;
+            }else {result+=number;
+            break;
+            }
+        }
+       return result;
+
     }
 
 }
