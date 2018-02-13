@@ -35,20 +35,9 @@ public class PalindromeNumber {
     }
 
     public static int [] numberToArray (int number){
-        int x = 0;
-        int n = 0;
-        int y = 0;
+        int sizeOfArray = quantityOfNumbers(number);
 
-        for (int i = 1000000000; x==0 ; i/=10) {
-        x = number / i;
-            if (x != 0) {
-                y=i;
-            }
-        }
-
-        n =(int) Math.log10(y)+1;
-
-        int[] array = new int [n];
+        int[] array = new int [sizeOfArray];
         for (int i = array.length-1; i >=0 ; i--) {
             if (number>=10) {
                 array [i] = number % (number / 10);
@@ -59,11 +48,26 @@ public class PalindromeNumber {
                 break;
             }
 
-
         }
 
         return array;
 
+    }
+
+    public static int quantityOfNumbers (int number){
+        int firstDigitAtNumber = 0;
+        int qttyOfNumbers = 0;
+        int numberOfTens = 0;
+
+        for (int i = 1000000000; firstDigitAtNumber==0 ; i/=10) {
+            firstDigitAtNumber = number / i;
+            if (firstDigitAtNumber != 0) {
+                numberOfTens=i;
+            }
+        }
+
+        qttyOfNumbers =(int) Math.log10(numberOfTens)+1;
+        return qttyOfNumbers;
     }
 
 }
