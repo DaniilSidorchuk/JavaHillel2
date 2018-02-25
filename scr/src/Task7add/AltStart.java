@@ -4,6 +4,7 @@ import Task7.*;
 
 public class AltStart {
 
+
     public static void main(String[] args) {
 
         Car car = new Car();
@@ -15,6 +16,7 @@ public class AltStart {
         for (Vehicle v: vehicles) {
             signal.callOfSignal(v);
         }
+
 
     }
 
