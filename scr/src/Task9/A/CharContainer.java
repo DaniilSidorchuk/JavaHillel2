@@ -23,13 +23,14 @@ public class CharContainer {
     }
 
     public boolean set(int index, char c){
-        if (index > arr.length){
+
+        if (index > arr.length || index<0){
             return false;
         }
         if (arr[index-1] == '\0'){
             occ++;
         }
-        arr[index-1] = c;
+        arr[index] = c;
         return true;
     }
 
@@ -80,6 +81,7 @@ public class CharContainer {
         for (int i = 0; i < this.length() ; i++) {
            this.set(i,'\0');
         }
+        occ = 0;
     }
 
     public int indexOf(char c){
