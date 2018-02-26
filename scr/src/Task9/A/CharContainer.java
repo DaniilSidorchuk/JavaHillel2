@@ -115,13 +115,10 @@ public class CharContainer {
             return true;
     }
 
-    public void sort(String d){
-        d.trim().toLowerCase();
-        if (!d.equals("asc") || !d.equals("desc")){
-            return;
-        }
+    public void sort(AscDesc d){
 
-        if (d.equals("asc")){
+
+        if (d.equals("ASC")){
 
             for (int i = arr.length; i > 0 ; i--) {
                 for (int j = 0; j < i; j++) {
