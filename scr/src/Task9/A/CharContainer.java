@@ -64,6 +64,7 @@ public class CharContainer {
     }
 
     public boolean equals(CharContainer c){
+       if (this.equals(c)){return true;}
     if (this.getFullSize() != c.getFullSize() || this.length()!=c.length()){
         return false;
     }
@@ -131,19 +132,19 @@ public class CharContainer {
                 }
             }
 
-        }
+        } else {
 
-        for (int i = arr.length; i > 0 ; i--) {
-            for (int j = 0; j < i; j++) {
-                if( arr[j] < arr[j+1]){
-                    char tmp = arr[j];
-                    arr[j] = arr[j+1];
-                    arr[j+1] = tmp;
+            for (int i = arr.length; i > 0; i--) {
+                for (int j = 0; j < i; j++) {
+                    if (arr[j] < arr[j + 1]) {
+                        char tmp = arr[j];
+                        arr[j] = arr[j + 1];
+                        arr[j + 1] = tmp;
+                    }
                 }
+
             }
-
         }
-
     }
 
 

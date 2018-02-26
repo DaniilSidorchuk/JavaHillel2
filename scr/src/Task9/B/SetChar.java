@@ -25,7 +25,7 @@ public class SetChar extends CharContainer {
         return true;
     }
 
-    public boolean addUnique (char var){
+    private boolean addUnique (char var){
         if (this.contains(var)){
             return false;
         }
