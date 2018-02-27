@@ -9,9 +9,14 @@ package Task5.b;
 //        кол-во отрицательных элементов.
 
 
+import java.util.Arrays;
+
 public class ArrayOperations {
 
     public static void main(String[] args) {
+
+        int [] arr = new int[] {10,7,4,5,7};
+
 
     int [][] array = new int[10][10];
         for (int i = 0; i < array.length; i++) {
