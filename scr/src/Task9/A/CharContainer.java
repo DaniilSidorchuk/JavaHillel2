@@ -147,5 +147,19 @@ public class CharContainer {
         }
     }
 
+    public char[] getArr() {
+        return arr;
+    }
 
+    public int getOcc() {
+        return occ;
+    }
+
+    public void setOcc(int occ) {
+        this.occ = occ;
+    }
+
+    public void setArr(char[] arr) {
+        this.arr = arr;
+    }
 }

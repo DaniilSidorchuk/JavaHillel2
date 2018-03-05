@@ -6,4 +6,6 @@ public class Train extends Vehicle {
     protected void signal() {
         System.out.println("Choooooh Chooooop");
     }
+
+
 }
