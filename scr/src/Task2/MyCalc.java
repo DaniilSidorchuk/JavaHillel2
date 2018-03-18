@@ -1,3 +1,5 @@
+package Task2;
+
 public class MyCalc {
 
     static double add(double val1, double val2) {
