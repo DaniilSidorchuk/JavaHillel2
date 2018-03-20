@@ -6,8 +6,8 @@ public class Main {
         String text = "jfjkwfjrek, fwnf. fii! rfjferijfewuihfaaa !!! ? aaaa ref";
         System.out.println(text);
 
-        StringMethods.findAndPrintSameCharacters(text, 5);
-//        StringMethods.findAndPrintSameCharacters(text, 78);
+//        StringMethods.findAndPrintSameCharacters(text, 5);
+        StringMethods.findAndPrintSameCharacters(text, 20);
 
 // работает       StringMethods.vowelsConsonantsMore(text);
 

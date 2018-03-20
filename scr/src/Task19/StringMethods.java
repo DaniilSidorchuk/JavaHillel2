@@ -13,6 +13,9 @@ public class StringMethods {
 
 
    public static void findAndPrintSameCharacters (String text, int n) {
+       if (n > text.length()){
+           return;
+       }
        text.toLowerCase();
        text.trim();
        char[] arr = text.toCharArray();
@@ -43,8 +46,13 @@ public class StringMethods {
                }
            }
        }
+       int j = 1;
        for (int i = 0; i < n; i++) {
-           System.out.println(arr[i] + " has been used " + qtty[i] + " times");
+           if (qtty[i]<=0){
+               System.out.println("There isn`t any more symbols");
+               break;
+           }
+           System.out.println(j++ + ") " + arr[i] + " has been used " + qtty[i] + " times");
        }
    }
 
