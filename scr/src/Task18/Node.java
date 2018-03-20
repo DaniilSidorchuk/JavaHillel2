@@ -14,7 +14,13 @@ public class Node {
         return value;
     }
 
-
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null){return false;}
+        if (!(obj instanceof Node)){return false;}
+        obj = (Node) obj;
+        return this.getValue().equals(((Node) obj).getValue())? true:false;
+    }
 }
 
 

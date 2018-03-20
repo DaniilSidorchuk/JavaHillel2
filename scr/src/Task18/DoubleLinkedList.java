@@ -3,6 +3,7 @@ package Task18;
 public class DoubleLinkedList {
 
     Node head;
+    Node tail;
     private int size = 0;
 
    public void insertAfter (String value){
@@ -13,18 +14,17 @@ public class DoubleLinkedList {
            return;
        }
 
-       Node current = head;
-
-       while (current!=null){
-           if (current.next == null){
-               current.next = new Node(value);
-               current.next.previous = current;
-               size++;
-               return;
-           }
-           current = current.next;
+       if (head.next!=null){
+           tail = new Node(value);
+           head.next = tail;
+           tail.previous = head;
+           size++;
+           return;
        }
-
+       Node current = tail;
+       tail.next = new Node(value);
+       tail = tail.next;
+       tail.previous = current;
 
    }
 
@@ -45,12 +45,14 @@ public class DoubleLinkedList {
    }
 
    public boolean contains (String value){
-       Node current = head;
-       while (current!=null){
-           if (current.getValue().equals(value)){
+       Node currentStart = head;
+       Node currentEnd = tail;
+       while (!currentStart.previous.equals(currentEnd.next)){
+           if (currentStart.getValue().equals(value) || currentEnd.getValue().equals(value)){
                return true;
            }
-           current = current.next;
+           currentStart = currentStart.next;
+           currentEnd = currentEnd.previous;
        }
        return false;
    }
@@ -61,6 +63,7 @@ public class DoubleLinkedList {
            if (current.getValue().equals(value)){
                if(current.previous==null){
                    head = head.next;
+                   size--;
                    return;
                }
                head = head.previous;
@@ -82,11 +85,8 @@ public class DoubleLinkedList {
    }
 
    public void clear (){
-       while (head.next!=null){
-           head = head.next;
-       }
        head = null;
-       size = 0;
+       tail = null;
    }
 
 }
