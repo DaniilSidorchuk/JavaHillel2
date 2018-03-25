@@ -14,7 +14,7 @@ public class DoubleLinkedList {
            return;
        }
 
-       if (head.next!=null){
+       if (head.next==null){
            tail = new Node(value);
            head.next = tail;
            tail.previous = head;
@@ -88,5 +88,16 @@ public class DoubleLinkedList {
        head = null;
        tail = null;
    }
+
+   public static void main (String[] args) {
+
+       DoubleLinkedList list = new DoubleLinkedList();
+       list.insertAfter("A");
+       list.insertAfter("C");
+       list.insertBefore("L");
+
+
+
+    }
 
 }

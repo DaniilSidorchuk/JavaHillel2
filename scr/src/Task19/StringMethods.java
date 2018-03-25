@@ -56,7 +56,6 @@ public class StringMethods {
        }
    }
 
-
    public static void vowelsConsonantsMore (String text){
        text = text.toUpperCase().trim();
        char [] arr = text.toCharArray();

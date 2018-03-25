@@ -3,8 +3,8 @@ package Task18;
 public class Node {
 
     private String value;
-    Node previous;
-    Node next;
+   public Node previous;
+   public Node next;
 
     public Node(String value) {
         this.value = value;
