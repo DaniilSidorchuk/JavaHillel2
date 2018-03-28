@@ -1,6 +1,6 @@
 package Task20;
 
-import Task18.Node;
+
 
 public class Deque {
 
@@ -95,6 +95,29 @@ public class Deque {
 	int size(){
         return size;
     }
+
+    private class Node{
+        private String value;
+        public Node previous;
+        public Node next;
+
+        public Node(String value) {
+            this.value = value;
+        }
+
+        public String getValue() {
+            return value;
+        }
+
+        @Override
+        public boolean equals(Object obj) {
+            if (obj == null){return false;}
+            if (!(obj instanceof Node)){return false;}
+            obj = (Node) obj;
+            return this.getValue().equals(((Node) obj).getValue())? true:false;
+        }
+    }
+
 
     public static void main(String[] args) {
         Deque deque = new Deque();
