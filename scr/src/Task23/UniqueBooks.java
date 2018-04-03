@@ -1,5 +1,6 @@
 package Task23;
 
+import java.util.Collections;
 import java.util.HashSet;
 import java.util.LinkedList;
 
@@ -26,7 +27,11 @@ public class UniqueBooks {
         System.out.println(set);
     }
 
-    private class Book {
+    public void bookSort(){
+        Collections.sort(list1);
+    }
+
+    private class Book implements Comparable<Book>{
         private String title;
         private String author;
 
@@ -69,6 +74,21 @@ public class UniqueBooks {
             }
 
             return hash;
+        }
+
+        @Override
+        public int compareTo(Book o) {
+            int length;
+            length = this.author.length() < o.author.length() ? this.author.length(): o.author.length();
+            for (int i = 0; i < length; i++) {
+                if(this.author.toCharArray()[i] < o.author.toCharArray()[i]){
+                    return -1;
+                }
+                if(this.author.toCharArray()[i] > o.author.toCharArray()[i]){
+                    return 1;
+                }
+            }
+            return 0;
         }
     }
 
